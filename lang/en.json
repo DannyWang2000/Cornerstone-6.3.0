@@ -693,6 +693,7 @@
         }
     },
     "products": {
+        "size_chart":"Size Chart",
         "current_stock": "Current Stock:",
         "quantity": "Quantity:",
         "change_product_options": "Change options for {name}",

@@ -388,7 +388,15 @@
         ],
         "industries": [
           "home_garden"
-        ]
+        ],
+        "translations": {
+          "i18n.description": {
+            "default": "This is the light variation for this theme!",
+            "en": "This is the light variation for this theme!",
+            "zh-CN": "这是这个主题的轻微变化！",
+            "fr-FR": "C'est la variation de lumière pour ce thème!"
+          }
+        }
       },
       "images": {},
       "settings": {}

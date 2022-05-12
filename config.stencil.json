@@ -3,7 +3,9 @@
     "brand": {},
     "category": {},
     "page": {},
-    "product": {}
+    "product": {
+      "product-size-chart.html":"/vivox20/"
+    }
   },
   "apiHost": "https://api.bigcommerce.com",
   "normalStoreUrl": "https://change.mybigcommerce.com",
