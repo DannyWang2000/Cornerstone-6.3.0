@@ -9,6 +9,8 @@ import videoGallery from './product/video-gallery';
 import { classifyForm } from './common/utils/form-utils';
 import modalFactory from './global/modal';
 
+// import $ from 'jquery';
+
 export default class Product extends PageManager {
     constructor(context) {
         super(context);
@@ -59,6 +61,8 @@ export default class Product extends PageManager {
         });
 
         this.productReviewHandler();
+
+        this.helloWorld();
     }
 
     ariaDescribeReviewInputs($form) {
@@ -81,5 +85,10 @@ export default class Product extends PageManager {
         if (this.url.indexOf('#bulk_pricing') !== -1) {
             this.$bulkPricingLink.trigger('click');
         }
+    }
+
+    helloWorld() {
+        console.log("[assets/js/theme/product.js]: Hello World!");
+        console.log("[assets/js/theme/product.js]: " + this.context.productThumbSize);
     }
 }

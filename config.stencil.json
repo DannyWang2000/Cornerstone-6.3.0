@@ -4,7 +4,7 @@
     "category": {},
     "page": {},
     "product": {
-      "product-size-chart.html":"/vivox20/"
+      "product-size-chart":"/vivox20/"
     }
   },
   "apiHost": "https://api.bigcommerce.com",

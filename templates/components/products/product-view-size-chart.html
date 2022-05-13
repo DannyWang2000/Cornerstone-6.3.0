@@ -24,8 +24,8 @@
 
     <section class="productView-images" data-image-gallery>
         {{!--
-            Note that these image sizes are coupled to image sizes used in /assets/js/theme/common/product-details.js
-            for variant/rule image replacement
+        Note that these image sizes are coupled to image sizes used in /assets/js/theme/common/product-details.js
+        for variant/rule image replacement
         --}}
         {{#if product.images.length '>' 1 }}
         {{> components/carousel-content-announcement}}
@@ -46,7 +46,7 @@
                     lazyload=theme_settings.lazyload_mode
                     default_image=theme_settings.default_image_product
                     otherAttributes="data-main-image"
-                }}
+                    }}
                     {{!-- Remove the surrounding a-element if there is no main image. --}}
                     {{#if product.main_image}}
                 </a>
@@ -70,9 +70,9 @@
                     data-image-gallery-new-image-srcset="{{getImageSrcset this use_default_sizes=true}}"
                     data-image-gallery-zoom-image-url="{{getImageSrcset this (cdn ../theme_settings.default_image_product) 1x=../theme_settings.zoom_size}}">
                     {{> components/common/responsive-img
-                        image=this
-                        fallback_size=../theme_settings.productview_thumb_size
-                        lazyload=../theme_settings.lazyload_mode
+                    image=this
+                    fallback_size=../theme_settings.productview_thumb_size
+                    lazyload=../theme_settings.lazyload_mode
                     }}
                 </a>
             </li>
@@ -114,8 +114,8 @@
                 {{/if}}
                 {{#if settings.show_product_reviews}}
                 <a href="{{product.url}}{{#if is_ajax}}#write_review{{/if}}"
-                    class="productView-reviewLink productView-reviewLink--new"
-                    {{#unless is_ajax}}data-reveal-id="modal-review-form" {{/unless}} role="button">
+                    class="productView-reviewLink productView-reviewLink--new" {{#unless
+                    is_ajax}}data-reveal-id="modal-review-form" {{/unless}} role="button">
                     {{lang 'products.reviews.new'}}
                 </a>
                 {{> components/products/modals/writeReview}}
@@ -257,7 +257,7 @@
         {{#if theme_settings.show_product_details_tabs}}
         {{> components/products/description-tabs-size-chart}}
         {{else}}
-        {{> components/products/description}}
+        {{> components/products/description-size-chart}}
         {{/if}}
     </article>
 </div>

@@ -1,17 +1,11 @@
 ---
-product:
-videos:
-limit: {{theme_settings.productpage_videos_count}}
-reviews:
-limit: {{theme_settings.productpage_reviews_count}}
-related_products:
-limit: {{theme_settings.productpage_related_products_count}}
-similar_by_views:
-limit: {{theme_settings.productpage_similar_by_views_count}}
+
 ---
 {{inject 'productId' product.id}}
 
 {{#partial "page"}}
+
+{{inject 'productThumbSize' theme_settings.productthumb_size}}
 
 {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 
@@ -28,7 +22,8 @@ limit: {{theme_settings.productpage_similar_by_views_count}}
     {{> components/products/videos product.videos}}
     {{/if}}
 
-    {{#all settings.show_product_reviews theme_settings.show_product_reviews (if theme_settings.show_product_details_tabs '!==' true)}}
+    {{#all settings.show_product_reviews theme_settings.show_product_reviews (if
+    theme_settings.show_product_details_tabs '!==' true)}}
     {{> components/products/reviews reviews=product.reviews product=product urls=urls}}
     {{/all}}
 
